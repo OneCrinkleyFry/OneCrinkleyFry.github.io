@@ -7,21 +7,21 @@
     </div>
   </div>
 </header>
-<nav ngbNav #nav="ngbNav" class="nav-tabs d-flex justify-content-around">
+<nav ngbNav #nav="ngbNav" class="row nav-tabs d-flex">
   <ng-container ngbNavItem>
-    <a ngbNavLink [routerLink]="['/home']">Projects</a>
+    <a ngbNavLink class="col-4 text-center" [routerLink]="['/home']">Projects</a>
     <ng-template ngbNavContent>
       <router-outlet></router-outlet>
     </ng-template>
   </ng-container>
-  <ng-container ngbNavItem>
-    <a ngbNavLink [routerLink]="['/about']">About</a>
+  <ng-container ngbNavItem class="mx-auto">
+    <a ngbNavLink class="col-4 text-center" [routerLink]="['/about']">About</a>
     <ng-template ngbNavContent>
       <router-outlet></router-outlet>
     </ng-template>
   </ng-container>
-  <ng-container ngbNavItem>
-    <a ngbNavLink [routerLink]="['/resume']">Resume</a>
+  <ng-container ngbNavItem class="mx-auto">
+    <a ngbNavLink class="col-4 text-center" [routerLink]="['/resume']">Resume</a>
     <ng-template ngbNavContent>
       <router-outlet></router-outlet>
     </ng-template>
