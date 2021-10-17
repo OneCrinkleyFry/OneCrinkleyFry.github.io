@@ -1,1 +1,35 @@
-<router-outlet></router-outlet>
+<header>
+  <div class="row p-4 d-flex justify-content-between">
+    <img src="../assets/profile.png" class="profile-pic">
+    <div class="text-right">
+      <h1>Josh Miller</h1>
+      <h2>Web Developer</h2>
+    </div>
+  </div>
+</header>
+<nav ngbNav #nav="ngbNav" class="nav-tabs d-flex justify-content-around">
+  <ng-container ngbNavItem>
+    <a ngbNavLink [routerLink]="['/home']">Projects</a>
+    <ng-template ngbNavContent>
+      <router-outlet></router-outlet>
+    </ng-template>
+  </ng-container>
+  <ng-container ngbNavItem>
+    <a ngbNavLink [routerLink]="['/about']">About</a>
+    <ng-template ngbNavContent>
+      <router-outlet></router-outlet>
+    </ng-template>
+  </ng-container>
+  <ng-container ngbNavItem>
+    <a ngbNavLink [routerLink]="['/resume']">Resume</a>
+    <ng-template ngbNavContent>
+      <router-outlet></router-outlet>
+    </ng-template>
+  </ng-container>
+</nav>
+
+<div [ngbNavOutlet]="nav" class="mt-2"></div>
+
+<div>
+  <router-outlet></router-outlet>
+</div>
