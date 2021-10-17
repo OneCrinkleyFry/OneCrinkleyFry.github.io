@@ -1,9 +1,20 @@
 <header>
-  <div class="row p-4 d-flex justify-content-between">
+  <div class="row p-5 d-flex justify-content-between">
     <img src="../assets/profile.png" class="profile-pic">
     <div class="text-right">
-      <h1>Josh Miller</h1>
-      <h2>Web Developer</h2>
+      <div class="mb-5">
+        <a class="col-3" href='https://github.com/onecrinkleyfry'><img alt="github"
+            src="https://img.icons8.com/cute-clipart/64/000000/github.png" /></a>
+        <a class="col-3" href='https://www.linkedin.com/in/joshua-miller-607344133/'><img alt="linkedin"
+            src="https://img.icons8.com/cute-clipart/64/000000/linkedin.png" /></a>
+        <a class="col-3" href='https://stackoverflow.com/users/13985703/josh-miller'><img alt="stackoverflow"
+            src="https://img.icons8.com/color/48/000000/stackoverflow.png" /></a>
+      </div>
+      <div>
+        <h1 class="font-weight-bold">Josh Miller</h1>
+        <h2>Web Developer</h2>
+        <h3>Phoenix, AZ</h3>
+      </div>
     </div>
   </div>
 </header>
@@ -11,19 +22,25 @@
   <ng-container ngbNavItem>
     <a ngbNavLink class="col-4 text-center" [routerLink]="['/home']">Projects</a>
     <ng-template ngbNavContent>
-      <router-outlet></router-outlet>
+      <div class="m-5 p-3 card bg-dark">
+        <router-outlet></router-outlet>
+      </div>
     </ng-template>
   </ng-container>
   <ng-container ngbNavItem class="mx-auto">
     <a ngbNavLink class="col-4 text-center" [routerLink]="['/about']">About</a>
     <ng-template ngbNavContent>
-      <router-outlet></router-outlet>
+      <div class="m-5 p-3 card bg-dark">
+        <router-outlet></router-outlet>
+      </div>
     </ng-template>
   </ng-container>
   <ng-container ngbNavItem class="mx-auto">
     <a ngbNavLink class="col-4 text-center" [routerLink]="['/resume']">Resume</a>
     <ng-template ngbNavContent>
-      <router-outlet></router-outlet>
+      <div class="m-5 p-3 card bg-dark">
+        <router-outlet></router-outlet>
+      </div>
     </ng-template>
   </ng-container>
 </nav>
