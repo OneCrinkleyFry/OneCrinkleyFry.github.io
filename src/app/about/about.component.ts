@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, Input, OnInit } from '@angular/core';
+import { AppComponent } from '../app.component';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -10,6 +10,7 @@ export class AboutComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    // AppComponent.active=2;
   }
 
 }

@@ -19,35 +19,27 @@
     </div>
   </div>
 </header>
-<nav ngbNav #nav="ngbNav" class="row nav-tabs d-flex">
-  <ng-container ngbNavItem>
-    <a ngbNavLink class="col-4 text-center" [routerLink]="['/home']">Projects</a>
+<ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs d-flex row p-0">
+  <li class="col-4 p-0 text-center" [ngbNavItem]="1">
+    <a ngbNavLink [routerLink]="['/home']">Project</a>
     <ng-template ngbNavContent>
-      <div class="m-5 p-3 card bg-dark">
-        <router-outlet></router-outlet>
-      </div>
+      <router-outlet></router-outlet>
     </ng-template>
-  </ng-container>
-  <ng-container ngbNavItem class="mx-auto">
-    <a ngbNavLink class="col-4 text-center" [routerLink]="['/about']">About</a>
+  </li>
+  <li class="col-4 p-0 text-center" [ngbNavItem]="2">
+    <a ngbNavLink [routerLink]="['/about']">About</a>
     <ng-template ngbNavContent>
-      <div class="m-5 p-3 card bg-dark">
-        <router-outlet></router-outlet>
-      </div>
+      <router-outlet></router-outlet>
     </ng-template>
-  </ng-container>
-  <ng-container ngbNavItem class="mx-auto">
-    <a ngbNavLink class="col-4 text-center" [routerLink]="['/resume']">Resume</a>
+  </li>
+  <li class="col-4 p-0 text-center" [ngbNavItem]="3">
+    <a ngbNavLink [routerLink]="['/resume']">Resume</a>
     <ng-template ngbNavContent>
-      <div class="m-5 p-3 card bg-dark">
-        <router-outlet></router-outlet>
-      </div>
+      <router-outlet></router-outlet>
     </ng-template>
-  </ng-container>
-</nav>
+  </li>
+</ul>
 
-<div [ngbNavOutlet]="nav" class="mt-2"></div>
-
-<div>
-  <router-outlet></router-outlet>
-</div>
+<article class="d-flex justify-content-center">
+  <div [ngbNavOutlet]="nav" class="mt-2 p-4 card m-5 col-10 bg-dark"></div>
+</article>
