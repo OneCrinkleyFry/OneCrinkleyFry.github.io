@@ -7,13 +7,17 @@ import { ProjectComponent } from './project/project.component';
 import { AboutComponent } from './about/about.component';
 import { ResumeComponent } from './resume/resume.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HeaderComponent } from './header/header.component';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProjectComponent,
     AboutComponent,
-    ResumeComponent
+    ResumeComponent,
+    HeaderComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,

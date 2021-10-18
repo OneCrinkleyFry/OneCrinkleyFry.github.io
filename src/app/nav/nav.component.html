@@ -1,0 +1,24 @@
+<ul ngbNav #nav="ngbNav"  class="nav-tabs d-flex row p-0"> <!--[(activeId)]=""-->
+   <li class="col-4 p-0 text-center" [ngbNavItem]="1">
+     <a ngbNavLink [routerLink]="['/home']">Projects</a>
+     <ng-template ngbNavContent>
+       <router-outlet></router-outlet>
+     </ng-template>
+   </li>
+   <li class="col-4 p-0 text-center" [ngbNavItem]="2">
+     <a ngbNavLink [routerLink]="['/about']">About</a>
+     <ng-template ngbNavContent>
+       <router-outlet></router-outlet>
+     </ng-template>
+   </li>
+   <li class="col-4 p-0 text-center" [ngbNavItem]="3">
+     <a ngbNavLink [routerLink]="['/resume']">Resume</a>
+     <ng-template ngbNavContent>
+       <router-outlet></router-outlet>
+     </ng-template>
+   </li>
+ </ul>
+
+ <article class="d-flex justify-content-center">
+   <div [ngbNavOutlet]="nav" class="mt-2 p-4 card m-5 col-10 bg-dark"></div>
+ </article>
