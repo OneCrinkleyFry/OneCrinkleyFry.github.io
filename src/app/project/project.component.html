@@ -1,1 +1,13 @@
-<p>project works!</p>
+<h3>Projects</h3>
+<div class="d-flex justify-content-around row">
+   <div *ngFor="let project of projects" class="col-sm-10 col-md-5 card bg-dark text-white rounded m-1 row project">
+      <img [src]='project.source' class="card-img" [alt]='project.title' />
+      <div class="card-img-overlay">
+         <h5 class="card-title">{{project.title}}</h5>
+         <p class="card-text">{{project.description}}</p>
+         <a [href]='project.link' target='_blank' rel="noreferrer">See it deployed!</a>
+         <br />
+         <a [href]='project.repo' target='_blank' rel="noreferrer">This is the repository!</a>
+      </div>
+   </div>
+</div>
